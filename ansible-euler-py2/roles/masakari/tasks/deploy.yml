@@ -1,0 +1,14 @@
+---
+- include: register.yml
+
+- include: config.yml
+
+- include: check-containers.yml
+
+- include: clone.yml
+  when: masakari_dev_mode | bool
+
+- include: bootstrap.yml
+
+- name: Flush handlers
+  meta: flush_handlers

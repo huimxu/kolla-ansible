@@ -1,0 +1,5 @@
+---
+- name: "Configure haproxy for {{ project_name }}"
+  vars:
+    project_services: "{{ masakari_services }}"
+  tags: always
